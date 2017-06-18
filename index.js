@@ -6,7 +6,7 @@ module.exports = function( tgtHost ) {
 
             hostSplit[0]   = tgtHost;
             var hostname   = hostSplit.join(":");
-            var redirected = `${req.protocol}://www.${hostname}${req.originalUrl}`;
+            var redirected = `${req.protocol}://${hostname}${req.originalUrl}`;
 
             res.redirect( 301, redirected );
             return;
